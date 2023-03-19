@@ -1,0 +1,60 @@
+{% extends 'base.html' %} 
+
+{% block content %} 
+<div class="row">
+    <div class="col-md-12">
+        <form action="" class="card card-sm">
+            <div class="card-body row no-gutters align-items-center">
+                <div class="col">
+                    <input type="searh" 
+                    placeholder="Saisissez le nom de produit que vous cherchez"
+                    name="item-name" 
+                    class="form-control form-control-borderless" 
+                    >
+                </div>
+                <div class="col-auto">
+                    <button type="submit" class=""btn btn-success >Recherche</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="row">
+    {% for product in product_object %}
+    <div class="col-md-13">
+        <div class="card"><img width="300px" max-height="300px" height="100%"   src="{{  product.image }}" alt="">
+        <div class="card-body">
+            <div class="card-title">{{ product.name }}</div>
+            <div class="card-text">{{  product.price }}</div>
+            <a href="{{ product.id }}" class="btn btn-warning">Voir</a>
+            <button class="btn btn-success">Ajouter</button>
+        </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+<div class="row mt-3">
+    <div class="col-md-3" class="offset-md-4">
+        <ul class="pagination"> 
+            {% if product_object.has_previous %}
+            <li class="page-item">
+                <a href="?page={{ product_object.previous_page_number }}" class="page-link">Précédent</a>
+            </li>
+            {% endif %}
+
+            <li class="page-item active">
+                <a href="?page={{ product_object.number}}" class="page-link">{{ product_object.number }}</a>
+            </li>
+
+            {% if product_object.has_next %}
+            <li class="page-item">
+                <a href="?page={{ product_object.next_page_number }}" class="page-link">Suivant</a>
+            </li>
+            {% endif %}
+        </ul>
+    </div>
+</div>
+
+{% endblock %}
