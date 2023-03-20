@@ -98,3 +98,11 @@ class Carousel(models.Model):
 
     def __str__(self):
         return self.caption
+    
+class ContactUsPage(models.Model): # This is the model for the banner image
+    caption = models.CharField(max_length=255)
+    image = models.ImageField(upload_to='media/%y', default='media/b9ddc38e5835fac634678392530003dc.png')
+    # Add more fields as needed
+
+    def __str__(self):
+        return self.caption   

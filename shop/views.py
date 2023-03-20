@@ -1,5 +1,5 @@
 from django.shortcuts import redirect, render
-from .models import Product, ContactForm, ImageSetter, Image,AboutUs,ContactUs,Footer
+from .models import Product, ContactForm, ImageSetter, Image,AboutUs,ContactUs,Footer,ContactUsPage
 from django.core.paginator import Paginator
 from .forms import ContactFormForm
 from django.core.mail import send_mail
@@ -37,7 +37,8 @@ def acceuil(request):
     aboutuspics = AboutUs.objects.all()
     contactuspics = ContactUs.objects.all()
     footerpics = Footer.objects.all()
-    return render(request, 'shop/acceuil.html ', {'pics':pics , 'aboutuspics':aboutuspics , 'contactuspics':contactuspics , 'footerpics':footerpics})
+    contactuspagepics = ContactUsPage.objects.all()
+    return render(request, 'shop/acceuil.html ', {'pics':pics , 'aboutuspics':aboutuspics , 'contactuspics':contactuspics , 'footerpics':footerpics, 'contactuspagepics':contactuspagepics})
 
 # def contact(request):
 #     return render(request, 'shop/contact.html')

@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Category, Product, ContactForm, ImageSetter, Image,Carousel,AboutUs,ContactUs,Footer
+from .models import Category, Product, ContactForm, ImageSetter, Image,Carousel,AboutUs,ContactUs,Footer,ContactUsPage
 
 # Register your models here.
 
@@ -26,3 +26,4 @@ admin.site.register(Image)
 admin.site.register(AboutUs)
 admin.site.register(ContactUs)
 admin.site.register(Footer)
+admin.site.register(ContactUsPage)

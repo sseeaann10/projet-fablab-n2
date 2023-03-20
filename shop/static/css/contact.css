@@ -38,17 +38,61 @@ body{
 	grid-template-columns: repeat(2, 1fr);
 	justify-content: center;
 	align-items: center;
-	text-align: center;
+	text-align: left;
 	background-color: #fff;
   
 	box-shadow: 0px 0px 19px 5px rgba(0,0,0,0.19);
 }
 
 .left{
-	background: url("https://www.basket4ballers.com/img/cms/blog/2016/10/jordan%20wings.png") no-repeat center;
-	background-size: cover;
+	
+	background-repeat: no-repeat;  
+	background-position: center;
+	background-size: contain;
 	height: 100%;
 }
+input[type=text], select {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+  }
+  input[type=email], select {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+  }
+  input[type=number], select {
+	width: 100%;
+	padding: 12px 20px;
+	margin: 8px 0;
+	display: inline-block;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	box-sizing: border-box;
+  }
+  
+  input[type=submit] {
+	width: 100%;
+	background-color: #4CAF50;
+	color: white;
+	padding: 14px 20px;
+	margin: 8px 0;
+	border: none;
+	border-radius: 4px;
+	cursor: pointer;
+  }
+  
+  input[type=submit]:hover {
+	background-color: #45a049;
+  }
 
 .right{
 	padding: 25px 40px;
@@ -321,7 +365,7 @@ textarea{
   .btn {
 	  color: #fff;
 	  padding: 10px 20px;
-	  font-size: 11px;
+	  font-size: 15px;
 	  letter-spacing: 3px;
 	  font-weight: 500;
 	  background-color: #daa37f;

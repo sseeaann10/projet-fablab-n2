@@ -123,8 +123,8 @@
       
   
       <footer class="footer">
-        {% if aboutuspics %}
-            {% for x in aboutuspics %}
+        {% if footerpics %}
+            {% for x in footerpics %}
                 {% if x.name == div_class %}
                     <div class="footer__half footer__half-1" id="footer" style="background-image: url('{{ x.image.url }}')">
                 {% endif %}
