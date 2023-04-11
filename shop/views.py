@@ -56,7 +56,7 @@ def contact(request):
             send_mail(
             'Thanks for contacting us',
             f'Thank you for contacting us, {name}! We have received your message about {subject} and will get back to you shortly.',
-            'your_email@gmail.com', # Change this to your email address
+            'seantesst01@gmail.com', # Change this to your email address
             [email],
             fail_silently=False,
         )
